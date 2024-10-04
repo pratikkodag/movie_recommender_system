@@ -3,7 +3,6 @@ import pickle
 import numpy
 import pandas as pd
 import requests
-from sklearn.metrics.pairwise import cosine_similarity
 # Custom CSS to style the columns, background, and title
 st.markdown("""
     <style>

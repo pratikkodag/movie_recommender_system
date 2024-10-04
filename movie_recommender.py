@@ -74,7 +74,7 @@ def recommend(movie):
 movies_list=pickle.load(open('movies_dict.pkl','rb'))
 movies = pd.DataFrame(movies_list)
 
-similarity =pickle.load(open('similarity.pkl','rb'))
+similarity =pickle.load(open('similarity_compressed.pkl','rb'))
 
 
 st.markdown('<div class="title"><h1>🎬 Movie Recommender System</h1></div>', unsafe_allow_html=True)

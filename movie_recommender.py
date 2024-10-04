@@ -3,7 +3,7 @@ import pickle
 import numpy
 import pandas as pd
 import requests
-
+from sklearn.metrics.pairwise import cosine_similarity
 # Custom CSS to style the columns, background, and title
 st.markdown("""
     <style>
@@ -74,7 +74,7 @@ def recommend(movie):
 movies_list=pickle.load(open('movies_dict.pkl','rb'))
 movies = pd.DataFrame(movies_list)
 
-similarity = pickle.load(open('similarity.pkl','rb'))
+similarity =cosine_similarity(vectors)
 
 
 st.markdown('<div class="title"><h1>🎬 Movie Recommender System</h1></div>', unsafe_allow_html=True)
